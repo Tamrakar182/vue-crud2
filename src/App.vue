@@ -32,7 +32,7 @@ ul {
   padding-left: 15px;
   font-size: 20px;
 }
-.wrraper {
+.wrapper {
   display: flex;
 }
 .left-content {

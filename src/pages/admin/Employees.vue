@@ -2,6 +2,7 @@
   <router-link :to="{name:'EmployeeCreate'}" class="btn">Add Employee</router-link>
 
   <table>
+
 	<thead>
 	  <tr>
 		<th>#id</th>
@@ -11,6 +12,7 @@
 		<th>Actions</th>
 	  </tr>
 	</thead>
+
 	<tbody>
 	  <tr v-for="employee in employees" :key="employee.id">
 		<td>{{employee.id}}</td>
@@ -22,6 +24,7 @@
 		</td>
 	  </tr>
 	</tbody>
+	
   </table>
 </template>
 
