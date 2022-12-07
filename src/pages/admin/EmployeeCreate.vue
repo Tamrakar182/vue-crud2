@@ -21,7 +21,7 @@
     </select>
 
     <label>Joining Date</label>
-    <input type="date" />
+    <input type="date" v-model="date"/>
 
     <button>Add Employee</button>
   </form>
@@ -52,12 +52,13 @@ export default {
             department:department.value,
             role:role.value,
             date:date.value
-          })
+          }),
         });
+
+        console.log(date)
 
         await router.push('/admin/employees');
       }
-
       return {name,address,department,role,date,submit}
     }
 }

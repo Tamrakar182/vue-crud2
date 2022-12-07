@@ -2,36 +2,44 @@
   "employees": [
     {
       "id": 1,
-      "Name": "John Smith",
-      "Address": "Wall Street 404",
-      "Role": "Manager"
+      "name": "John Smith",
+      "address": "Wall Street 404",
+      "department": "Department 1",
+      "role": "Manager",
+      "date": "2020-04-03"
     },
     {
       "id": 2,
-      "Name": "John Smith2",
-      "Address": "Wall Street 404",
-      "Role": "Manager"
+      "name": "John Smith2",
+      "address": "Wall Street 404",
+      "department": "Department 1",
+      "role": "Manager",
+      "date": "2020-04-03"
+
     },
     {
       "id": 3,
-      "Name": "John Smith3",
-      "Address": "Wall Street 404",
-      "Role": "Manager"
+      "name": "John Smith3",
+      "address": "Wall Street 404",
+      "department": "Department 1",
+      "role": "Manager",
+      "date": "2020-04-03"
+
     },
     {
       "name": "iisda",
       "address": "sdad",
       "department": "Department 1",
       "role": "Manager",
-      "date": "",
+      "date": "2020-04-03",
       "id": 4
     },
     {
       "name": "manjul",
       "address": "asda",
-      "department": "",
-      "role": "",
-      "date": "",
+      "department": "Department 1",
+      "role": "Employee",
+      "date": "2020-04-03",
       "id": 5
     },
     {
@@ -39,7 +47,7 @@
       "address": "dfghj",
       "department": "Department 1",
       "role": "Manager",
-      "date": "",
+      "date": "2020-04-03",
       "id": 6
     }
   ]

@@ -1,7 +1,7 @@
 <template>
   <router-link :to="{name:'EmployeeCreate'}" class="btn">Add Employee</router-link>
 
-  <table v-if = "employees._rawValue !== []">
+  <table v-if = "(employees.length > 0)">
 
 	<thead>
 	  <tr>
@@ -18,11 +18,11 @@
 	<tbody>
 	  <tr v-for="employee in employees" :key="employee.id" >
 		<td>{{employee.id}}</td>
-		<td>{{employee.Name}}</td>
-		<td>{{employee.Address}}</td>
-		<td>{{employee.Role}}</td>
-		<td>{{employee.Department}}</td>
-		<td>{{employee.Date}}</td>
+		<td>{{employee.name}}</td>
+		<td>{{employee.address}}</td>
+		<td>{{employee.role}}</td>
+		<td>{{employee.department}}</td>
+		<td>{{employee.date}}</td>
 		<td>
 		<router-link :to="{name: 'EmployeeEdit', params: {id:employee.id}}" class="btn">Edit</router-link>
 		<button @click="del(employee.id)" class="btn btn-del">Delete</button>
@@ -33,13 +33,14 @@
 	
 	</table>
 
-	<h1 v-else >No records found</h1>
+	<h1 v-else>No records found</h1>
 
 </template>
 
 <script>
-import { ref } from '@vue/reactivity';
-import { onMounted } from '@vue/runtime-core';
+import { ref, onMounted } from 'vue';
+import moment from 'moment';
+
 
 export default {
   name:'Employees',
@@ -58,13 +59,12 @@ export default {
 
 	  employees.value = employees.value.filter( p => p.id !== id);
 	}
-
-	console.log(employees._rawValue)
-	console.log(employees.Date)
-
 	return { employees, del }
   }
 }
+
+
+
 </script>
 
 <style>

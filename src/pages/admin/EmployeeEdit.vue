@@ -22,7 +22,7 @@
     </select>
 
     <label>Joining Date</label>
-    <input type="date" />
+    <input type="date" v-model="date"/>
 
     <button>Save</button>
   </form>
