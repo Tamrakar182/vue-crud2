@@ -17,12 +17,12 @@
 
 	<tbody>
 	  <tr v-for="employee in employees" :key="employee.id" >
-		<td>{{employee.id}}</td>
-		<td>{{employee.name}}</td>
-		<td>{{employee.address}}</td>
-		<td>{{employee.role}}</td>
-		<td>{{employee.department}}</td>
-		<td>{{employee.date}}</td>
+		<td>{{ employee.id }}</td>
+		<td>{{ employee.name }}</td>
+		<td>{{ employee.address }}</td>
+		<td>{{ employee.role }}</td>
+		<td>{{ employee.department }}</td>
+		<td>{{ moment(employee.date).fromNow() }}</td>
 		<td>
 		<router-link :to="{name: 'EmployeeEdit', params: {id:employee.id}}" class="btn">Edit</router-link>
 		<button @click="del(employee.id)" class="btn btn-del">Delete</button>
@@ -59,7 +59,8 @@ export default {
 
 	  employees.value = employees.value.filter( p => p.id !== id);
 	}
-	return { employees, del }
+
+	return { employees, del, moment }
   }
 }
 
