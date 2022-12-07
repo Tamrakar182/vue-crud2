@@ -16,7 +16,7 @@
 	</thead>
 
 	<tbody>
-	  <tr v-for="employee in employees" :key="employee.id" >
+	  <tr v-for="employee in employees" :key="employee.id" v-if = 'employees != []' >
 		<td>{{employee.id}}</td>
 		<td>{{employee.Name}}</td>
 		<td>{{employee.Address}}</td>
@@ -28,6 +28,8 @@
 		<button @click="del(employee.id)" class="btn btn-del">Delete</button>
 		</td>
 	  </tr>
+
+	  <tr v-else >No records found</tr>
 	</tbody>
 	
   </table>
