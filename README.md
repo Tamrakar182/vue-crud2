@@ -15,3 +15,6 @@ npm run serve
 npm run build
 ```
 
+### Runs the json server
+npm run database
+
