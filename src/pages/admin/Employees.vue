@@ -9,18 +9,23 @@
 		<th>Name</th>
 		<th>Address</th>
 		<th>Role</th>
+		<th>Department</th>
+		<th>Joined Date</th>
 		<th>Actions</th>
 	  </tr>
 	</thead>
 
 	<tbody>
-	  <tr v-for="employee in employees" :key="employee.id">
+	  <tr v-for="employee in employees" :key="employee.id" >
 		<td>{{employee.id}}</td>
 		<td>{{employee.Name}}</td>
 		<td>{{employee.Address}}</td>
 		<td>{{employee.Role}}</td>
+		<td>{{employee.Department}}</td>
+		<td>{{employee.Date}}</td>
 		<td>
-		  <button @click="del(employee.id)" class="btn btn-del">Delete</button>
+		<router-link :to="{name: 'EmployeeEdit', params: {id:employee.id}}" class="btn">Edit</router-link>
+		<button @click="del(employee.id)" class="btn btn-del">Delete</button>
 		</td>
 	  </tr>
 	</tbody>

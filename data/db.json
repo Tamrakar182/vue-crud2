@@ -1,22 +1,46 @@
 {
   "employees": [
     {
-    "id": 1,
-    "Name":"John Smith",
-    "Address":"Wall Street 404",
-    "Role":"Manager"
+      "id": 1,
+      "Name": "John Smith",
+      "Address": "Wall Street 404",
+      "Role": "Manager"
     },
     {
       "id": 2,
-      "Name":"John Smith2",
-      "Address":"Wall Street 404",
-      "Role":"Manager"
-      },
+      "Name": "John Smith2",
+      "Address": "Wall Street 404",
+      "Role": "Manager"
+    },
     {
       "id": 3,
-      "Name":"John Smith3",
-      "Address":"Wall Street 404",
-      "Role":"Manager"
+      "Name": "John Smith3",
+      "Address": "Wall Street 404",
+      "Role": "Manager"
+    },
+    {
+      "name": "iisda",
+      "address": "sdad",
+      "department": "Department 1",
+      "role": "Manager",
+      "date": "",
+      "id": 4
+    },
+    {
+      "name": "manjul",
+      "address": "asda",
+      "department": "",
+      "role": "",
+      "date": "",
+      "id": 5
+    },
+    {
+      "name": "dhjkl",
+      "address": "dfghj",
+      "department": "Department 1",
+      "role": "Manager",
+      "date": "",
+      "id": 6
     }
   ]
 }
