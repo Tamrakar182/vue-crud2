@@ -1,7 +1,7 @@
 <template>
   <router-link :to="{name:'EmployeeCreate'}" class="btn">Add Employee</router-link>
 
-  <table>
+  <table v-if = "employees._rawValue !== []">
 
 	<thead>
 	  <tr>
@@ -16,7 +16,7 @@
 	</thead>
 
 	<tbody>
-	  <tr v-for="employee in employees" :key="employee.id" v-if = 'employees != []' >
+	  <tr v-for="employee in employees" :key="employee.id" >
 		<td>{{employee.id}}</td>
 		<td>{{employee.Name}}</td>
 		<td>{{employee.Address}}</td>
@@ -29,10 +29,12 @@
 		</td>
 	  </tr>
 
-	  <tr v-else >No records found</tr>
 	</tbody>
 	
-  </table>
+	</table>
+
+	<h1 v-else >No records found</h1>
+
 </template>
 
 <script>
@@ -56,6 +58,9 @@ export default {
 
 	  employees.value = employees.value.filter( p => p.id !== id);
 	}
+
+	console.log(employees._rawValue)
+	console.log(employees.Date)
 
 	return { employees, del }
   }
